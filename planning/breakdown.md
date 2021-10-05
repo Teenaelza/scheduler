@@ -19,38 +19,38 @@
 ### Button
 
 - State:
-- Props:
-- Used by:
+- Props:danger,confirm
+- Used by:appointment/Confim appointment/Form
 
 ### DayList
 
 - State:
-- Props:
-- Used by:
+- Props:days(array),day,setDay(fn)
+- Used by:Application
 
 ### DayListItem
 
 - State:
-- Props:
-- Used by:
+- Props:spots,selected,name,setDay(fn),key
+- Used by:DayList
 
 ### InterviewerList
 
 - State:
-- Props:
-- Used by:
+- Props:interviewers(array),interviewer,setInterviewer(fn)
+- Used by:Form
 
 ### InterviewerListItem
 
 - State:
-- Props:
-- Used by:
+- Props:selected,setInterviewer,key,name,avatar,setInterviewer
+- Used by:InterviewerList
 
 ### Appointment
 
-- State:
-- Props:
-- Used by:
+- State:mode, transition, back -useVisualMode
+- Props:[id,interview{student,inteviewer{avatar,id,name}},bookInterview(fn),time,key]
+- Used by:Application
 
 ### Appointment/Header
 
@@ -93,3 +93,8 @@
 - State:
 - Props:
 - Used by:
+
+Application
+
+- State
+  state- (day,days(array-id,name,appointments,interviewers,spots),appointments(OBJ-id,time,interview({student,interviewer})),interviewers(objects))
