@@ -13,9 +13,10 @@ export default function useVisualMode(first) {
     }
   };
   const back = () => {
+    const newhistory = [...history];
     if (history.length > 1) {
-      setMode(history[1]);
-      setHistory(history.slice(1));
+      setMode(newhistory[1]);
+      setHistory(newhistory.slice(1));
     }
   };
   return {
