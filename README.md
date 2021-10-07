@@ -1,6 +1,6 @@
 # Interview Scheduler
 
-Built with modern React, Interview Scheduler is a ingle page application (SPA) that helps you to book, edit, and cancel interviews as you like.
+Built with modern React, Interview Scheduler is a single page application (SPA) that helps you to book, edit, and cancel interviews as you like.
 
 !["Interview Sceduler "](https://github.com/Teenaelza/scheduler/blob/master/docs/interview-scheduler.gif)
 
@@ -14,9 +14,16 @@ Built with modern React, Interview Scheduler is a ingle page application (SPA) t
 - Axios
 - Storybook, Webpack Dev Server, Jest, Testing Library
 
-### Scheduler API server application
+### Scheduler API server
 
 - Node, Express, PostgreSQL
+
+## Testing
+
+- Storybook,
+- Jest,
+- Testing Library,
+- Cypress
 
 ## Interview Scheduler Functionality
 
@@ -45,11 +52,11 @@ Built with modern React, Interview Scheduler is a ingle page application (SPA) t
 - When the user presses the close button of the error they are returned to the Form or Show view .
 - The application makes API requests to load and persist - data. We do not lose data after a browser refresh.
 
-## The Scheduler client application
-
-Setup
+## Setup
 
 Install dependencies with `npm install`.
+
+### The Webpack Development Server
 
 Dependencies
 
@@ -59,10 +66,6 @@ Dependencies
 - react: ^16.9.0,
 - react-dom: ^16.9.0,
 - react-scripts: 3.0.0
-
-## Testing
-
-Storybook, , Jest, Testing Library
 
 ## Running Webpack Development Server
 
@@ -84,8 +87,9 @@ npm run storybook
 
 ## Running Scheduler API server
 
-Download and install scheduler-api following the instructions on its repo.
-From scheduler-api
+- Both servers run concurrently. Requests are proxied from the Webpack development server to the API server.
+- Download and install scheduler-api following the instructions on its repo.
+  From scheduler-api
 
 ```sh
 npm start
